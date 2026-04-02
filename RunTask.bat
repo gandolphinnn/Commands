@@ -47,7 +47,7 @@ if "%1"=="c" (
 	goto run
 )
 
-if "%1"=="d" (
+if "%1"=="s" (
 	set "project=NaarGo"
 	set "task=npm run start-localdev"
 	set "folder=NaarGo"
