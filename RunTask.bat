@@ -61,6 +61,13 @@ if "%1"=="d" (
 	goto run
 )
 
+if "%1"=="n" (
+	set "project=NaarNew site"
+	set "task=npm run dev"
+	set "folder=NaarNew\website"
+	goto run
+)
+
 if "%1"=="u" (
 	set "project=Update API"
 	set "task=npm run dev:updateApi"
@@ -129,6 +136,7 @@ echo ^|    b    ^| B2B              ^|
 echo ^|    c    ^| B2C              ^|
 echo ^|    s    ^| NaarGo (SUPPORT) ^|
 echo ^|    d    ^| PRINT (DOCS)     ^|
+echo ^|    n    ^| NaarNew          ^|
 echo ^|    u    ^| UPDATE API       ^|
 echo ^|---------^|------------------^|
 echo ^|    a    ^| NaarApi          ^|
