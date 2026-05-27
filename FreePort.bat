@@ -36,7 +36,7 @@ for /f "tokens=5" %%a in ('netstat -ano ^| find "LISTEN" ^| find "[::1]:%1"') do
 	set /a count+=1
 )
 if "!count!"=="1" if "%kill%"=="1" (
-	echo [96mKilling process !pid!
+	echo Killing process !pid!
 	taskkill /PID !pid! /f
 )
 if "!count!"=="0" (

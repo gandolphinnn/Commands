@@ -61,7 +61,7 @@ if "%1"=="d" (
 	goto run
 )
 
-if "%1"=="n" (
+if "%1"=="m" (
 	set "project=NaarNew site"
 	set "task=npm run dev"
 	set "folder=NaarNew\website"
@@ -124,28 +124,36 @@ if "%1"=="l" (
 	goto run
 )
 
+if "%1"=="n" (
+	set "project=NaarNew api"
+	set "task=dotnet run"
+	set "folder=NaarNew\api\src\Naar.Api"
+	goto run
+)
+
 echo [91mInvalid parameter %1%[0m
 
 :help
 echo         PARAMS:
-echo ^|---------^|------------------^|
-echo ^| Command ^| Task             ^|
-echo ^|---------^|------------------^|
-echo ^|    i    ^| INTRANET         ^|
-echo ^|    b    ^| B2B              ^|
-echo ^|    c    ^| B2C              ^|
-echo ^|    s    ^| NaarGo (SUPPORT) ^|
-echo ^|    d    ^| PRINT (DOCS)     ^|
-echo ^|    n    ^| NaarNew          ^|
-echo ^|    u    ^| UPDATE API       ^|
-echo ^|---------^|------------------^|
-echo ^|    a    ^| NaarApi          ^|
-echo ^|    g    ^| NaarGo           ^|
-echo ^|    z    ^| NaarAzureAgent   ^|
-echo ^|    f    ^| NaarFunctions    ^|
-echo ^|    p    ^| NaarAzurePricer  ^|
-echo ^|    l    ^| NaarLRT          ^|
-echo ^|---------^|------------------^|
+echo ^|------------------^|---------^|------------------^|
+echo ^| Side             ^| Command ^| Task             ^|
+echo ^|------------------^|---------^|------------------^|
+echo ^|                  ^|    i    ^| INTRANET         ^|
+echo ^|                  ^|    b    ^| B2B              ^|
+echo ^|                  ^|    c    ^| B2C              ^|
+echo ^|     FRONTEND     ^|    s    ^| NaarGo (SUPPORT) ^|
+echo ^|                  ^|    d    ^| PRINT (DOCS)     ^|
+echo ^|                  ^|    m    ^| NaarNew (MERDA)  ^|
+echo ^|                  ^|    u    ^| UPDATE API       ^|
+echo ^|------------------^|---------^|------------------^|
+echo ^|                  ^|    a    ^| NaarApi          ^|
+echo ^|                  ^|    g    ^| NaarGo           ^|
+echo ^|                  ^|    z    ^| NaarAzureAgent   ^|
+echo ^|     BACKEND      ^|    f    ^| NaarFunctions    ^|
+echo ^|                  ^|    p    ^| NaarAzurePricer  ^|
+echo ^|                  ^|    l    ^| NaarLRT          ^|
+echo ^|                  ^|    n    ^| NaarNew          ^|
+echo ^|------------------^|---------^|------------------^|
 goto end
 
 
