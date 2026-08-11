@@ -59,6 +59,19 @@ Launches Claude Code with `--dangerously-skip-permissions`.
 pray
 ```
 
+---
+
+### `hs.bat`
+Power control for the home server machines (NAS `glnas` + NUC `glnuc`) via Wake-on-LAN and SSH.
+
+```
+hs                  # status of both machines
+hs on  [nas|nuc]    # wake up (default: both, NAS then NUC)
+hs off [nas|nuc]    # clean shutdown via SSH (default: both, NUC then NAS)
+```
+
+`hs on nuc` requires the NAS to be up, `hs off nas` requires the NUC to be down; add `-f` to override. The underlying scripts live in `D:\Personale\HomeServer` (one-time SSH key setup: see `GESTIONE-ENERGIA.md` there).
+
 ## Setup
 
 Add this folder to your `PATH` so the commands are available system-wide.
