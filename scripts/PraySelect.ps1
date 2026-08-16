@@ -7,7 +7,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 # Collect every folder under the two roots
-$roots = 'D:\Progetti', 'D:\Personale'
+$roots = 'D:\Progetti', 'D:\Personale', 'D:\CODE'
 $all = @()
 foreach ($root in $roots) {
     if (Test-Path -LiteralPath $root) {
@@ -22,7 +22,7 @@ foreach ($root in $roots) {
 }
 
 if ($all.Count -eq 0) {
-    Write-Host 'No folders found in D:\Progetti or D:\Personale' -ForegroundColor Red
+    Write-Host 'No folders found' -ForegroundColor Red
     exit 1
 }
 

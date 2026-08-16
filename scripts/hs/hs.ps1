@@ -6,7 +6,7 @@ param(
     [switch]$f
 )
 
-$scriptDir = "D:\Personale\HomeServer"
+$scriptDir = "D:\Code\HomeServer"
 $nasIp = "192.168.1.17"
 $nucIp = "192.168.1.171"
 $nasSsh = "root@$nasIp"
@@ -39,7 +39,7 @@ function Show-Help {
 }
 
 function Invoke-Script([string]$scriptName, [bool]$withForce) {
-    $path = Join-Path $scriptDir $scriptName
+    $path = Join-Path $PSScriptRoot $scriptName
     if (-not (Test-Path $path)) {
         Write-Host "Script not found: $path"
         return 2

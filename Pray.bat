@@ -42,7 +42,7 @@ exit /b %errorlevel%
 :resumeGlobal
 set "PRAYRES=%TEMP%\PrayResume.txt"
 if exist "%PRAYRES%" del "%PRAYRES%" >nul 2>&1
-powershell -NoProfile -ExecutionPolicy Bypass -File "%HERE%PrayResume.ps1" -OutFile "%PRAYRES%"
+powershell -NoProfile -ExecutionPolicy Bypass -File "%HERE%/scripts/PrayResume.ps1" -OutFile "%PRAYRES%"
 if errorlevel 1 (
     echo No Claude session to resume.
     exit /b 1
@@ -66,7 +66,7 @@ rem --- helper: run the picker with the given extra args, then cd into the choic
 :select
 set "PRAYSEL=%TEMP%\PraySelection.txt"
 if exist "%PRAYSEL%" del "%PRAYSEL%" >nul 2>&1
-powershell -NoProfile -ExecutionPolicy Bypass -File "%HERE%PraySelect.ps1" -OutFile "%PRAYSEL%" %*
+powershell -NoProfile -ExecutionPolicy Bypass -File "%HERE%/scripts/PraySelect.ps1" -OutFile "%PRAYSEL%" %*
 if errorlevel 1 (
     echo Cancelled.
     exit /b 1
