@@ -7,8 +7,8 @@ param(
 )
 
 $scriptDir = "D:\Code\HomeServer"
-$nasIp = "192.168.1.17"
-$nucIp = "192.168.1.171"
+$nasIp = "glnas.uaru-snares.ts.net"
+$nucIp = "glnuc.uaru-snares.ts.net"
 $nasSsh = "root@$nasIp"
 $nucSsh = "luca@$nucIp"
 

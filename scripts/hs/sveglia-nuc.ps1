@@ -4,8 +4,8 @@
 param([switch]$Force)
 
 $mac = "84:39:BE:6B:55:73"
-$ip  = "192.168.1.171"
-$nas = "192.168.1.17"
+$ip  = "glnuc.uaru-snares.ts.net"
+$nas = "glnas.uaru-snares.ts.net"
 
 if (-not $Force) {
     if (-not (Test-Connection -ComputerName $nas -Count 1 -Quiet)) {

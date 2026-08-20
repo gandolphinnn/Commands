@@ -3,7 +3,7 @@
 #               and the Wake-on-LAN toggle in OMV (Network -> Interfaces -> Edit).
 
 $mac = "3C:D9:2B:0C:F3:87"
-$ip  = "192.168.1.17"
+$ip  = "glnas.uaru-snares.ts.net"
 
 # Magic packet: 6x 0xFF bytes followed by the MAC repeated 16 times, UDP broadcast on port 9.
 # Sent both to the LAN broadcast (192.168.1.255) and the global one: with multiple network

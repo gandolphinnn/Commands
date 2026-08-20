@@ -4,8 +4,8 @@
 # Requirements (one-time setup, see GESTIONE-ENERGIA.md): PC SSH key for root@glnas.
 param([switch]$Force)
 
-$ip  = "192.168.1.17"
-$nuc = "192.168.1.171"
+$ip  = "glnas.uaru-snares.ts.net"
+$nuc = "glnuc.uaru-snares.ts.net"
 
 if (-not (Test-Connection -ComputerName $ip -Count 1 -Quiet)) {
     Write-Host "The NAS ($ip) is already off."

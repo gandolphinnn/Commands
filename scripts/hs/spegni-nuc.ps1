@@ -3,7 +3,7 @@
 # for luca@glnuc + NOPASSWD sudoers rule for /usr/sbin/poweroff.
 param([switch]$Force)  # accepted for symmetry with the other scripts, not needed here
 
-$ip = "192.168.1.171"
+$ip = "glnuc.uaru-snares.ts.net"
 
 if (-not (Test-Connection -ComputerName $ip -Count 1 -Quiet)) {
     Write-Host "The NUC ($ip) is already off."
